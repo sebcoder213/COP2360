@@ -1,8 +1,25 @@
+// Populate the dictionary and display dictionary contents - Reese German
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
+class Program
+{
 
+    static Dictionary<int, string> customDictionary = new Dictionary<int, string>();
 
+    static void Main()
+    {
+        customDictionary.Add(1, "Apple");
+        customDictionary.Add(2, "Banana");
+        customDictionary.Add(3, "Cherry");
+        customDictionary.Add(4, "Date");
 
-
+        Console.WriteLine("Current Dictionary Contents (using foreach enumeration):");
+        foreach (KeyValuePair<int, string> entry in customDictionary)
+        {
+            Console.WriteLine($"Key: {entry.Key}, Value: {entry.Value}");
+        }
 
   // Remove an entry from the dictionary -Corrinne Whitt
     static void RemoveCustomKey()
